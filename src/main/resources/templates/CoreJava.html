@@ -1,28 +1,240 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Title</title>
+
+    <title>Core Java</title>
 </head>
 <body>
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        View Pages
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="/Github">GitHub</a>
-        <a class="dropdown-item" href="/HtmlCssBootstrap">HtmlCssBootStrap</a>
-        <a class="dropdown-item" href="/ObjectOrientedJava">ObjectOrientatedJava</a>
-        <a class="dropdown-item" href="/Home">Home</a>
-        <a class="dropdown-item" href="/ProjectDesignAndAlgorithms">ProjectDesignAndAlgorithms</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Github">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/ObjectOrientedJava">ObjectOrientationJava</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/CoreJava">CoreJava</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/ProjectDesignAndAlgorithms">ProjectDesignAndAlgorithms</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background-color: #808000;
+            align-content: center;
+            font-family: cursive;
+        }
+
+        .glow {
+            font-size: 80px;
+            color: #fff;
+            text-align: center;
+            -webkit-animation: glow 1s ease-in-out infinite alternate;
+            -moz-animation: glow 1s ease-in-out infinite alternate;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+
+        @-webkit-keyframes glow {
+            from {
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+            }
+
+            to {
+                text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+            }
+        }
+    </style>
+</head>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Add a gray background color with some padding */
+        body {
+            font-family: Arial;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+
+        /* Header/Blog Title */
+        .header {
+            padding: 30px;
+            font-size: 40px;
+            text-align: center;
+            background: white;
+        }
+
+        /* Create two unequal columns that floats next to each other */
+        /* Left column */
+        .leftcolumn {
+            float: left;
+            width: 75%;
+        }
+
+        /* Right column */
+        .rightcolumn {
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+        }
+
+        /* Fake image */
+        .fakeimg {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Add a card effect for articles */
+        .card {
+            background-color: white;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 20px;
+            text-align: center;
+            background: #ddd;
+            margin-top: 20px;
+        }
+
+        /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 800px) {
+            .leftcolumn, .rightcolumn {
+                width: 100%;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<h1 class="glow">Core Java</h1>
+</div>
+
+<div class="row">
+    <div class="leftcolumn">
+        <div class="card">
+            <h5>Core Java, Sep 27, 2019</h5>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTiGcp6avjhtvLCx-x5P-AnNI3Ci5HnvFJ0yLJyffUb2HMDBXTUBA">
+            <p>Html is a Hypertext Markup Language, a standardized system for tagging text files to achieve font, color, graphic, and hyperlink effects on World Wide Web pages.
+
+                CSS is CSS stands for Cascading Style Sheets. CSS describes how HTML elements are to be displayed on screen, paper,
+                or in other media. CSS saves a lot of work. It can control the layout of multiple web pages all at once. External
+                stylesheets are stored in CSS files.
+
+                BootStrap is a technique of loading a program into a computer by means of a few initial instructions which enable the
+                introduction of the rest of the program from an input device.
+            </p>
+        </div>
+    </div>
+    <div class="rightcolumn">
+        <div class="card">
+            <h2>Want to go back home?</h2>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsI02ZaSttCL4sR1szQUWtSXsIATHn7BbhMzNZFaVmX_oubOx63A">
+            <p>Click the link below</p>
+            <a href="/Home" class="btn btn-info" role="button">Click Me</a>
+        </div>
+        <div class="card">
+            <h3>Trending Post</h3>
+            <a href="/ObjectOrientedJava" class="btn btn-info" role="button">View More</a>
+            <a href="/ProjectDesignAndAlgorithms" class="btn btn-info" role="button">View More</a>
+            <a href="/HtmlCssBootstrap" class="btn btn-info" role="button">View More</a>
+            <a href="/CoreJava" class="btn btn-info" role="button">View More</a>
+        </div>
+        <div class="card">
+            <h3>Find out how to follow me!</h3>
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <style>
+                    .fa {
+                        padding: 20px;
+                        font-size: 30px;
+                        width: 50px;
+                        text-align: center;
+                        text-decoration: none;
+                        margin: 5px 2px;
+                    }
+
+                    .fa-facebook {
+                        background: #3B5998;
+                        color: white;
+                    }
+
+                    .fa-twitter {
+                        background: #55ACEE;
+                        color: white;}
+
+                    .fa-youtube {
+                        background: #bb0000;
+                        color: white;}
+
+                </style>
+            </head>
+            <body>
+
+            <!-- Add font awesome icons -->
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-skype"></a>
+
+
+            </body>
+            </html>
+        </div>
     </div>
 </div>
 
-<p>This is Core Java</p>
+<div class="footer">
+    <h2>Amber's Blog</h2>
+</div>
+
+</body>
+</html>
+
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
-</html>

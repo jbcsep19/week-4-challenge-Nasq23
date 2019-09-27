@@ -17,6 +17,11 @@ public class HomeController{
         return "Home";
     }
 
+    @RequestMapping("/AuthorsBio")
+    public String authorsabout(){
+        return "AuthorsBio";
+    }
+
     @RequestMapping("/ObjectOrientedJava")
     public String objectorientedjava(){
         return "ObjectOrientedJava";
@@ -24,7 +29,7 @@ public class HomeController{
 
     @RequestMapping("/ProjectDesignAndAlgorithms")
     public String projectdesignandalgorithms(){
-        return "ProjectDesignAndAgorithms";
+        return "ProjectDesignAndAlgorithms";
     }
 
     @RequestMapping("/HtmlCssBootstrap")
@@ -34,7 +39,7 @@ public class HomeController{
 
     @RequestMapping("/CoreJava")
     public String corejava(){
-        return "Blog";
+        return "CoreJava";
     }
 
     @RequestMapping("/Github")

@@ -7,56 +7,233 @@
     <title>Home</title>
 </head>
 <body>
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        View Pages
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <a class="dropdown-item" href="/Github">GitHub</a>
-        <a class="dropdown-item" href="/HtmlCssBootstrap">HtmlCssBootStrap</a>
-        <a class="dropdown-item" href="/ObjectOrientedJava">ObjectOrientatedJava</a>
-        <a class="dropdown-item" href="/CoreJava">CoreJava</a>
-        <a class="dropdown-item" href="/ProjectDesignAndAlgorithms">ProjectDesignAndAlgorithms</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Github">GitHub</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/ObjectOrientedJava">ObjOrJava</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/HtmlCssBootstrap">HtmlCssBtStrap</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/CoreJava">CoreJava</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/ProjectDesignAndAlgorithms">ProjDesign&Algorithms</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/AuthorsBio">Authors Bio</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the header */
+        .header {
+            grid-area: header;
+            background-color: #f1f1f1;
+            padding: 30px;
+            text-align: center;
+            font-size: 35px;
+        }
+
+        /* The grid container */
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                    'header header header header header header'
+                    'left left middle middle right right'
+                    'footer footer footer footer footer footer';
+            /* grid-column-gap: 10px; - if you want gap between the columns */
+        }
+
+        .left,
+        .middle,
+        .right {
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Style the left column */
+        .left {
+            grid-area: left;
+        }
+
+        /* Style the middle column */
+        .middle {
+            grid-area: middle;
+        }
+
+        /* Style the right column */
+        .right {
+            grid-area: right;
+        }
+
+        /* Style the footer */
+        .footer {
+            grid-area: footer;
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .grid-container  {
+                grid-template-areas:
+                        'header header header header header header'
+                        'left left left left left left'
+                        'middle middle middle middle middle middle'
+                        'right right right right right right'
+                        'footer footer footer footer footer footer';
+            }
+        }
+    </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create four equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 25%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Brief overview on programming</h2>
+
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <h2>Object Oriented Java</h2>
+        <p>Object-oriented programming (OOP) refers to a type of computer programming (software design) in which
+            programmers define not only the data type of a data structure, but also the types of operations (functions) that can be applied to the data structure. Click the View more
+            link to learn more.
+        </p>
+        <a href="/ObjectOrientedJava" class="btn btn-info" role="button">View More</a>
+    </div>
+    <div class="column" style="background-color:#bbb;">
+        <h2>Authors Bio</h2>
+        <p>Click the link below to learn about the author.</p>
+        <a href="/AuthorsBio" class="btn btn-info" role="button">View More</a>
+    </div>
+    <div class="column" style="background-color:#ccc;">
+        <h2>Core Java</h2>
+        <p>Core Java" is Sun's term, used to refer to Java SE, the standard edition and a set of related technologies,
+            like the Java VM, CORBA, et cetera. This is mostly to differentiate from, say, Java ME or Java EE.
+            Currently Java Core is defined as a following set: Basic technologies. Click the View more
+            link to learn more.</p>
+        <a href="/CoreJava" class="btn btn-info" role="button">View More</a>
+    </div>
+    <div class="column" style="background-color:#ddd;">
+        <h2>GitHub</h2>
+        <p>GitHub is a web-based version-control and collaboration platform for software developers.
+            GitHub is delivered through a software-as-a-service (SaaS) business model.GitHub is a Git repository hosting service, but it adds many of its own features.
+            While Git is a command line tool, GitHub provides a Web-based graphical interface. It also provides access control and several collaboration features,
+            such as a wikis and basic task management tools for every project. The flagship functionality of GitHub is “forking” – copying a
+            repository from one user’s account to another. This enables you to take a project that you don’t have write access to and modify
+            it under your own account. If you make changes you’d like to share, you can send a notification called a “pull request” to the
+            original owner. That user can then, with a click of a button, merge the changes found in your repo with the original repo. Click the View more
+            link to learn more.</p>
+        <a href="/Github" class="btn btn-info" role="button">View More</a>
     </div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-3 offset-6">
-            <b>GitHub</b>
-            <p>GitHub is a web-based version-control and collaboration platform for software developers.
-                GitHub is delivered through a software-as-a-service (SaaS) business model.</p>
-        </div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 300px; /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="row">
+    <div class="column" style="background-color:#aaa;">
+        <h2>HtmlCssBootstrap</h2>
+        <p>These three names are used for stlying your application/website. They all use their own special properties for styling. Click the link below to learn about each one.
+            Click the View more
+            link to learn more.</p>
+        <a href="/HtmlCssBootstrap" class="btn btn-info" role="button">View More</a>
     </div>
-    <!-- This class can be used with responsive classes such as -md- as well: -->
-    <div class="row">
-        <div class="col-md-3 offset-md-6">
-            <!-- Content -->
-        </div>
+    <div class="column" style="background-color:#bbb;">
+        <h2>Project Design & Algorithms</h2>
+        <p>Project design and algorithms go hand in hand in designing your project. The both are critcial to the final look of your project. Click the link below to learn more abdout
+        both. Click the View more
+            link to learn more.</p>
+        <a href="/ProjectDesignAndAlgorithms" class="btn btn-info" role="button">View More</a>
     </div>
 </div>
-<a href="/Github" class="btn btn-info" role="button">View More</a>
 
-<div class="media">
-    <img class="d-flex mr-3" data-src="holder.js/64x64?theme=sky" alt="Generic placeholder image">
-    <div class="media-body">
-        <h5 class="mt-0">HtmlCssBootstrap</h5>
-        Html/Css/Bootstrap are all ways your can style your website. To go into depth about all three check out the link below.
-    </div>
-</div>
-<a href="/HtmlCssBootstrap" class="btn btn-info" role="button">View More</a>
-
-<div class="media">
-    <img class="d-flex mr-3" data-src="holder.js/64x64?theme=sky" alt="Generic placeholder image">
-    <div class="media-body">
-        <h5 class="mt-0">ObjectOrientedJava</h5>
-        Object-Oriented Java is of a programming language using a methodology which enables a system to be modeled as a set
-        of objects which can be controlled and manipulated in a modular manner.
-        To go into depth about all three check out the link below.
-    </div>
-</div>
-<a href="/ObjectOrientedJava" class="btn btn-info" role="button">View More</a>
-
-
+</body>
+</html>
+</body>
+</html>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
